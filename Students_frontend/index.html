@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Student Management</h1>
+
+    <div class="container">
+        <h2>All Students</h2>
+        <button onclick="fetchStudents()">Load Students</button>
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be injected here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2 id="formTitle">Add New Student</h2>
+        <form id="studentForm">
+            <input type="hidden" id="studentId">
+            <input type="text" id="name" placeholder="Enter name" required>
+            <input type="number" id="age" placeholder="Enter age" required>
+            <input type="email" id="email" placeholder="Enter email" required>
+            <button type="submit">Save Student</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
